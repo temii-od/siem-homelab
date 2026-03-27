@@ -77,7 +77,7 @@ The Kibana dashboard includes four visualizations:
 
 
 ## Getting Started
-```Follow these instructions to get the full SIEM lab running locally on your machine.
+Follow these instructions to get the full SIEM lab running locally on your machine.
 
 
 ### Prerequisites

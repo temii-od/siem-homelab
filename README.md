@@ -111,7 +111,7 @@ bash logs/generate_logs.sh
 ### 4. Send Logs to Logstash
 ```bash
 cat logs/sample.log | nc -w 1 localhost 5000
-```bash
+```
 
 ### 5. Verify Logs Reached Elasticsearch
 ```bash

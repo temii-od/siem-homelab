@@ -5,7 +5,7 @@ A dockerized Security Information and Event Management (SIEM) lab
 built to simulate and detect real-world attack patterns against a 
 fintech payment API.
 
-# The Problem 
+## The Problem 
 
 Security teams at fintech companies like payment processors and 
 digital banks face a constant stream of threats — credential 
@@ -13,7 +13,7 @@ stuffing, unauthorized API access, privilege escalation, and
 injection attacks. Without a proper SIEM in place, these attacks 
 go undetected until significant damage is done.
 
-# The Solution
+## The Solution
 
 This lab simulates a real fintech SOC environment using the ELK 
 stack. It ingests logs from a simulated payment API, parses and 
@@ -22,7 +22,7 @@ attack patterns through a live Kibana dashboard — giving analysts
 the visibility they need to detect and respond to threats in 
 real time.
 
-# Feature
+## Features
 * Dockerized ELK Stack: Elasticsearch, Logstash, and Kibana 
   running in isolated containers with a single command setup
 * Fintech Attack Simulation: Bash script generating 200+ 
@@ -37,7 +37,7 @@ real time.
 * Network Segmentation: All containers isolated on a private 
   Docker bridge network
 
-# 🎯 Attack Scenarios Simulated
+## 🎯 Attack Scenarios Simulated
 
 | Attack Type | Description | Response Code |
 |---|---|---|
@@ -51,7 +51,7 @@ real time.
 
 
 
-# Tech Stack
+## Tech Stack
 * SIEM Platform: ELK Stack (Elasticsearch, Logstash, Kibana)
 * Log Ingestion: Logstash with Grok parsing pipeline
 * Storage & Search: Elasticsearch 8.13
@@ -62,7 +62,7 @@ real time.
 
 
 
-# 📊 Security Dashboard
+## 📊 Security Dashboard
 
 The Kibana dashboard includes four visualizations:
 - **HTTP Response Code Breakdown** — Donut chart showing 
@@ -76,49 +76,49 @@ The Kibana dashboard includes four visualizations:
   endpoints including injection and traversal payloads
 
 
-# Getting Started
+## Getting Started
 ```Follow these instructions to get the full SIEM lab running locally on your machine.
 
 
-# Prerequisites
+### Prerequisites
 * Docker Engine
 * Docker Compose v2
 * Git
 * Netcat (`nc`)
 
 
-# 1. Clone the repository
+### 1. Clone the repository
 ```bash
 git clone https://github.com/your-username/siem-homelab.git
 cd siem-homelab
 ```
 
-# 2. Start the ELK Stack
+### 2. Start the ELK Stack
 ```bash
 docker compose up -d
 ```
 
-# wait till all the containers are healthy
+wait till all the containers are healthy
 ```bash
 docker compose ps
 ```
 
-# 3. Generate Attack Simulation Logs
+### 3. Generate Attack Simulation Logs
 ```bash
 bash logs/generate_logs.sh
 ```
 
-# 4. Send Logs to Logstash
+### 4. Send Logs to Logstash
 ```bash
 cat logs/sample.log | nc -w 1 localhost 5000
 ```bash
 
-# 5. Verify Logs Reached Elasticsearch
+### 5. Verify Logs Reached Elasticsearch
 ```bash
 curl "http://localhost:9200/fintech-logs-*/_count
 ```
 
-# 6. Open Kibana Dashboard
+### 6. Open Kibana Dashboard
 ``` 
 http://localhost:5601
 ```

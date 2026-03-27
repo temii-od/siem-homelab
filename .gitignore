@@ -1,0 +1,18 @@
+# Logs
+*.log
+logs/generated/
+logs/*.log
+
+# Environment variables
+.env
+.env.*
+
+# Elasticsearch data volume
+data/
+
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/

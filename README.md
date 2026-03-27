@@ -65,17 +65,20 @@ real time.
 # 📊 Security Dashboard
 
 The Kibana dashboard includes four visualizations:
-
-*HTTP Response Code Breakdown: Donut chart showing  distribution of 200/401/403/500 responses revealing over 65% of traffic is   malicious 
-*Top IP Addresses by Request Count: Bar chart exposing 
+- **HTTP Response Code Breakdown** — Donut chart showing 
+  distribution of 200/401/403/500 responses revealing that over 
+  65% of traffic is malicious
+- **Top IP Addresses by Request Count** — Bar chart exposing 
   attacker IP `185.220.101.47` as the dominant traffic source
-*Total Unauthorized Access Attempts: Real-time metric tile 
+- **Total Unauthorized Access Attempts** — Real-time metric tile 
   showing total 401 count
-*Top Targeted Endpoints: Table of most attacked API 
+- **Top Targeted Endpoints** — Table of most attacked API 
   endpoints including injection and traversal payloads
 
 
 # Getting Started
+```Follow these instructions to get the full SIEM lab running locally on your machine.
+
 
 # Prerequisites
 * Docker Engine

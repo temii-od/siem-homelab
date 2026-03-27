@@ -81,30 +81,44 @@ The Kibana dashboard includes four visualizations:
 * Docker Engine
 * Docker Compose v2
 * Git
-* Netcat
+* Netcat (`nc`)
 
 
 # 1. Clone the repository
-git clone https://github.com/temii-od/siem-homelab.git
+```bash
+git clone https://github.com/your-username/siem-homelab.git
 cd siem-homelab
+```
 
 # 2. Start the ELK Stack
+```bash
 docker compose up -d
+```
 
 # wait till all the containers are healthy
+```bash
 docker compose ps
+```
 
 # 3. Generate Attack Simulation Logs
+```bash
 bash logs/generate_logs.sh
+```
 
 # 4. Send Logs to Logstash
+```bash
 cat logs/sample.log | nc -w 1 localhost 5000
+```bash
 
 # 5. Verify Logs Reached Elasticsearch
+```bash
 curl "http://localhost:9200/fintech-logs-*/_count
+```
 
-# 6. Open Kibana Dashboard 
+# 6. Open Kibana Dashboard
+``` 
 http://localhost:5601
+```
 
 
 Learned a lot building this. Made with 🛡️ by Temiloluwa
